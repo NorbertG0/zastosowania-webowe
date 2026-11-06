@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria zdjęć</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">GALERIA.</div>
+
+  <nav>
+    <a href="#" class="active" data-category="Wszystkie">Galeria</a>
+    <a href="#" data-category="Natura">Natura</a>
+    <a href="#" data-category="Miasta">Miasta</a>
+    <a href="#" data-category="Motoryzacja">Motoryzacja</a>
+  </nav>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Odkrywaj kadry.</h1>
+    <p>Galeria fotografii. Wybierz kategorię i znajdź coś dla siebie.</p>
+  </section>
+
+  <section class="toolbar">
+    <div class="filters">
+      <button class="filter active" data-category="Wszystkie">Wszystkie</button>
+      <button class="filter" data-category="Natura">Natura</button>
+      <button class="filter" data-category="Miasta">Miasta</button>
+      <button class="filter" data-category="Motoryzacja">Motoryzacja</button>
+    </div>
+
+    <div class="tools">
+      <input id="search" type="search" placeholder="Szukaj zdjęcia...">
+      <select id="sort">
+        <option value="default">Domyślna kolejność</option>
+        <option value="asc">Nazwa A–Z</option>
+        <option value="desc">Nazwa Z–A</option>
+      </select>
+    </div>
+  </section>
+
+  <p class="count" id="count"></p>
+  <section class="gallery" id="gallery"></section>
+  <p class="empty" id="empty">Nie znaleziono zdjęć.</p>
+</main>
+
+<footer>
+  Galeria fotografii
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <button class="modal-close" id="close" aria-label="Zamknij">×</button>
+  <div class="modal-content">
+    <img
+      class="modal-image"
+      id="modalImage"
+      src=""
+      alt=""
+    >
+    <h2 id="modalTitle"></h2>
+    <p id="modalCategory"></p>
+  </div>
+</div>
+</body>
+</html>
